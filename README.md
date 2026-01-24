@@ -5,6 +5,11 @@
 ![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_25vkz9axNp.png)
 ![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_J6TnOJg8Ds.png)
 
+## Требования
+- Joomla 5.x
+- PHP 8.1+
+- UIkit 3 (входит в YOOtheme Pro)
+
 ## Основные функции
 
 - Настройка времени открытия и закрытия для каждого дня недели (часы и минуты).
@@ -60,7 +65,3 @@ width: max-content;
     color: #fff;
 }
 ```
-## Требования
-- Joomla 5.x
-- PHP 8.1+
-- UIkit 3 (входит в YOOtheme Pro)
