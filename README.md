@@ -37,6 +37,7 @@
 ![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_J6TnOJg8Ds.png)
 
 ## Кастомизация внешнего вида
+![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_eaVVoOP4R8.png)
 
 Для добавления декоративных элементов (например, метки «график») используйте **Custom CSS** в шаблоне:
 
