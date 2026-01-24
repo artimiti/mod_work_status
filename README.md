@@ -49,7 +49,7 @@
 
 ```
 .work-status--modal{
-width: max-content;
+	width: max-content;
     position: relative;
 }
 .work-status--modal .uk-icon{color: gray;}
