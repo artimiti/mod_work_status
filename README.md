@@ -29,7 +29,7 @@
 
 ## Установка
 
-1. Скачайте архив [`mod_work_status.zip`](https://github.com/artimiti/mod_work_status/releases).
+1. Скачайте архив [Source code (zip)](https://github.com/artimiti/mod_work_status/releases).
 2. В админке Joomla перейдите: **Установка → Расширения → Загрузить и установить**.
 3. Создайте новый модуль типа **«Статус времени работы»**.
 4. Настройте расписание и сохраните.
