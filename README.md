@@ -3,7 +3,7 @@
 Модуль отображает текущий статус работы организации («открыто» / «закрыто») с учётом индивидуального графика по дням недели. Поддерживает кастомные сообщения, модальное окно с полным расписанием и корректную работу в часовой зоне Москвы.
 
 ![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_25vkz9axNp.png)
-![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_8sSNZtgvPo.png)
+![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_Yn8stmQH1Y.png)
 
 ## Требования
 - Joomla 5.x
