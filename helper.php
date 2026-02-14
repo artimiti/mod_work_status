@@ -149,7 +149,7 @@ class ModWorkStatusHelper
             }
 
             $html .= '<li class="el-item">';
-            $html .= '<div class="uk-child-width-auto@s uk-grid-small' . ($class ? ' ' . $class : '') . '" uk-grid>';
+            $html .= '<div class="uk-grid-small' . ($class ? ' ' . $class : '') . '" uk-grid>';
             $html .= '<div class="uk-width-expand"><div class="el-title uk-margin-remove">' . htmlspecialchars($day['label'], ENT_QUOTES, 'UTF-8') . '</div></div>';
             $html .= '<div><div class="el-content uk-panel">' . $timeText . '</div></div>';
             $html .= '</div>';
