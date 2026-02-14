@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>mod_work_status</name>
+    <author>artimity</author>
+    <creationDate>2026-01-19</creationDate>
+    <copyright>SEO-Expert</copyright>
+    <license>GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>MOD_WORK_STATUS_DESC</description>
+    <files>
+        <filename module="mod_work_status">mod_work_status.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <!-- ЕДИНСТВЕННАЯ ВКЛАДКА -->
+            <fieldset name="basic" label="MOD_WORK_STATUS_FIELDSET_SETTINGS">
+
+                <!-- Расписание по дням недели -->
+                <field name="mon_open_hour" type="text" label="MOD_WORK_STATUS_MON_OPEN_HOUR" default="" filter="integer" />
+                <field name="mon_open_min" type="text" label="MOD_WORK_STATUS_MON_OPEN_MIN" default="" filter="integer" />
+                <field name="mon_close_hour" type="text" label="MOD_WORK_STATUS_MON_CLOSE_HOUR" default="" filter="integer" />
+                <field name="mon_close_min" type="text" label="MOD_WORK_STATUS_MON_CLOSE_MIN" default="" filter="integer" />
+                <field name="mon_note" type="text" label="MOD_WORK_STATUS_MON_NOTE" default="" filter="raw" />
+
+                <field name="tue_open_hour" type="text" label="MOD_WORK_STATUS_TUE_OPEN_HOUR" default="" filter="integer" />
+                <field name="tue_open_min" type="text" label="MOD_WORK_STATUS_TUE_OPEN_MIN" default="" filter="integer" />
+                <field name="tue_close_hour" type="text" label="MOD_WORK_STATUS_TUE_CLOSE_HOUR" default="" filter="integer" />
+                <field name="tue_close_min" type="text" label="MOD_WORK_STATUS_TUE_CLOSE_MIN" default="" filter="integer" />
+                <field name="tue_note" type="text" label="MOD_WORK_STATUS_TUE_NOTE" default="" filter="raw" />
+
+                <field name="wed_open_hour" type="text" label="MOD_WORK_STATUS_WED_OPEN_HOUR" default="" filter="integer" />
+                <field name="wed_open_min" type="text" label="MOD_WORK_STATUS_WED_OPEN_MIN" default="" filter="integer" />
+                <field name="wed_close_hour" type="text" label="MOD_WORK_STATUS_WED_CLOSE_HOUR" default="" filter="integer" />
+                <field name="wed_close_min" type="text" label="MOD_WORK_STATUS_WED_CLOSE_MIN" default="" filter="integer" />
+                <field name="wed_note" type="text" label="MOD_WORK_STATUS_WED_NOTE" default="" filter="raw" />
+
+                <field name="thu_open_hour" type="text" label="MOD_WORK_STATUS_THU_OPEN_HOUR" default="" filter="integer" />
+                <field name="thu_open_min" type="text" label="MOD_WORK_STATUS_THU_OPEN_MIN" default="" filter="integer" />
+                <field name="thu_close_hour" type="text" label="MOD_WORK_STATUS_THU_CLOSE_HOUR" default="" filter="integer" />
+                <field name="thu_close_min" type="text" label="MOD_WORK_STATUS_THU_CLOSE_MIN" default="" filter="integer" />
+                <field name="thu_note" type="text" label="MOD_WORK_STATUS_THU_NOTE" default="" filter="raw" />
+                
+                <field name="fri_open_hour" type="text" label="MOD_WORK_STATUS_FRI_OPEN_HOUR" default="" filter="integer" />
+                <field name="fri_open_min" type="text" label="MOD_WORK_STATUS_FRI_OPEN_MIN" default="" filter="integer" />
+                <field name="fri_close_hour" type="text" label="MOD_WORK_STATUS_FRI_CLOSE_HOUR" default="" filter="integer" />
+                <field name="fri_close_min" type="text" label="MOD_WORK_STATUS_FRI_CLOSE_MIN" default="" filter="integer" />
+                <field name="fri_note" type="text" label="MOD_WORK_STATUS_FRI_NOTE" default="" filter="raw" />
+
+                <field name="sat_open_hour" type="text" label="MOD_WORK_STATUS_SAT_OPEN_HOUR" default="" filter="integer" />
+                <field name="sat_open_min" type="text" label="MOD_WORK_STATUS_SAT_OPEN_MIN" default="" filter="integer" />
+                <field name="sat_close_hour" type="text" label="MOD_WORK_STATUS_SAT_CLOSE_HOUR" default="" filter="integer" />
+                <field name="sat_close_min" type="text" label="MOD_WORK_STATUS_SAT_CLOSE_MIN" default="" filter="integer" />
+                <field name="sat_note" type="text" label="MOD_WORK_STATUS_SAT_NOTE" default="" filter="raw" />
+
+                <field name="sun_open_hour" type="text" label="MOD_WORK_STATUS_SUN_OPEN_HOUR" default="" filter="integer" />
+                <field name="sun_open_min" type="text" label="MOD_WORK_STATUS_SUN_OPEN_MIN" default="" filter="integer" />
+                <field name="sun_close_hour" type="text" label="MOD_WORK_STATUS_SUN_CLOSE_HOUR" default="" filter="integer" />
+                <field name="sun_close_min" type="text" label="MOD_WORK_STATUS_SUN_CLOSE_MIN" default="" filter="integer" />
+                <field name="sun_note" type="text" label="MOD_WORK_STATUS_SUN_NOTE" default="" filter="raw" />
+                
+                <!-- Дополнительные сообщения -->
+                <field name="ending_text" type="text" label="MOD_WORK_STATUS_ENDING_TEXT" default="" filter="raw" />
+                <field name="announcement" type="text" label="MOD_WORK_STATUS_ANNOUNCEMENT" default="" filter="raw" />
+
+                <!-- Модальное окно -->
+                <field
+                    name="use_modal"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="MOD_WORK_STATUS_USE_MODAL_LABEL"
+                    description="MOD_WORK_STATUS_USE_MODAL_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
