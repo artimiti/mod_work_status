@@ -107,6 +107,7 @@ class ModWorkStatusHelper
         return $names[$dayIndex] ?? 'следующего дня';
     }
 
+
     private static function formatTime($h, $m)
     {
         return sprintf('%d:%02d', $h, $m);
@@ -116,7 +117,6 @@ class ModWorkStatusHelper
     {
         $now = new DateTime('now', new DateTimeZone('Europe/Moscow'));
         $currentDayIndex = (int)$now->format('w');
-
         $days = [
             1 => ['label' => 'Понедельник', 'open_h' => $params->get('mon_open_hour'), 'open_m' => $params->get('mon_open_min'), 'close_h' => $params->get('mon_close_hour'), 'close_m' => $params->get('mon_close_min'), 'note' => $params->get('mon_note', '')],
             2 => ['label' => 'Вторник', 'open_h' => $params->get('tue_open_hour'), 'open_m' => $params->get('tue_open_min'), 'close_h' => $params->get('tue_close_hour'), 'close_m' => $params->get('tue_close_min'), 'note' => $params->get('tue_note', '')],
@@ -129,33 +129,33 @@ class ModWorkStatusHelper
 
         $html = '';
         foreach ($days as $dayIndex => $day) {
-            $isOpen = self::isValidTime([
-                'open_h' => $day['open_h'], 'open_m' => $day['open_m'],
-                'close_h' => $day['close_h'], 'close_m' => $day['close_m']
-            ]);
-
             $note = trim($day['note'] ?? '');
             if ($note !== '') {
-                $timeText = $note;
+                // Разметка для дня с примечанием
+                $html .= '<li class="el-item">';
+                $html .= '<div class="uk-grid uk-grid-small uk-grid-stack@m" uk-grid="">';
+                $html .= '<div class="uk-width-expand@m"><div class="el-title uk-margin-remove">' . htmlspecialchars($day['label'], ENT_QUOTES, 'UTF-8') . '</div></div>';
+                $html .= '<div class="uk-grid-margin"><div class="el-content uk-panel">' . $note . '</div></div>';
+                $html .= '</div>';
+                $html .= '</li>';
             } else {
+                // Стандартная разметка без примечания
+                $isOpen = self::isValidTime([
+                    'open_h' => $day['open_h'], 'open_m' => $day['open_m'],
+                    'close_h' => $day['close_h'], 'close_m' => $day['close_m']
+                ]);
                 $timeText = $isOpen
                     ? sprintf('%d:%02d – %d:%02d', (int)$day['open_h'], (int)$day['open_m'], (int)$day['close_h'], (int)$day['close_m'])
                     : 'Выходной';
+                $class = ($dayIndex === $currentDayIndex) ? ($isOpen ? 'uk-text-success' : 'uk-text-danger') : '';
+                $html .= '<li class="el-item">';
+                $html .= '<div class="uk-child-width-auto uk-grid-small' . ($class ? ' ' . $class : '') . '" uk-grid>';
+                $html .= '<div class="uk-width-expand"><div class="el-title uk-margin-remove">' . htmlspecialchars($day['label'], ENT_QUOTES, 'UTF-8') . '</div></div>';
+                $html .= '<div><div class="el-content uk-panel">' . $timeText . '</div></div>';
+                $html .= '</div>';
+                $html .= '</li>';
             }
-
-            $class = '';
-            if ($dayIndex === $currentDayIndex) {
-                $class = $isOpen ? 'uk-text-success' : 'uk-text-danger';
-            }
-
-            $html .= '<li class="el-item">';
-            $html .= '<div class="uk-grid-small' . ($class ? ' ' . $class : '') . '" uk-grid>';
-            $html .= '<div class="uk-width-expand"><div class="el-title uk-margin-remove">' . htmlspecialchars($day['label'], ENT_QUOTES, 'UTF-8') . '</div></div>';
-            $html .= '<div><div class="el-content uk-panel">' . $timeText . '</div></div>';
-            $html .= '</div>';
-            $html .= '</li>';
         }
-
         return $html;
     }
 }
