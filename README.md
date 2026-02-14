@@ -4,7 +4,6 @@
 
 ![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_25vkz9axNp.png)
 ![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_8sSNZtgvPo.png)
-![Пример работы модуля](https://raw.githubusercontent.com/artimiti/mod_work_status/main/browser_J6TnOJg8Ds.png)
 
 ## Требования
 - Joomla 5.x
