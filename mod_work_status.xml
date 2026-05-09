@@ -5,7 +5,7 @@
     <creationDate>2026-01-19</creationDate>
     <copyright>SEO-Expert</copyright>
     <license>GNU/GPL</license>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
     <description>MOD_WORK_STATUS_DESC</description>
     <files>
         <filename module="mod_work_status">mod_work_status.php</filename>
@@ -70,7 +70,7 @@
                     name="use_modal"
                     type="radio"
                     class="btn-group btn-group-yesno"
-                    default="0"
+                    default="1"
                     label="MOD_WORK_STATUS_USE_MODAL_LABEL"
                     description="MOD_WORK_STATUS_USE_MODAL_DESC"
                 >
@@ -83,7 +83,7 @@
                     name="marker_current_day"
                     type="radio"
                     class="btn-group btn-group-yesno"
-                    default="0"
+                    default="1"
                     label="MOD_WORK_STATUS_MARKER_CURRENT_DAY_LABEL"
                     description="MOD_WORK_STATUS_MARKER_CURRENT_DAY_DESC"
                 >
@@ -96,7 +96,7 @@
                     name="highlight_current_day"
                     type="radio"
                     class="btn-group btn-group-yesno"
-                    default="1"
+                    default="0"
                     label="MOD_WORK_STATUS_HIGHLIGHT_CURRENT_DAY_LABEL"
                     description="MOD_WORK_STATUS_HIGHLIGHT_CURRENT_DAY_DESC"
                 >
